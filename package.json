@@ -1,0 +1,43 @@
+{
+  "name": "mcp-data-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP Data Agent \u2014 open-source MCP framework for securely connecting AI assistants to application databases. Created by Arslan Habib.",
+  "author": {
+    "name": "Arslan Habib",
+    "url": "https://github.com/arslanhabib"
+  },
+  "creator": "Arslan Habib",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "node api.js && npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b --pretty",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "database",
+    "postgresql",
+    "multi-tenant",
+    "rbac",
+    "llm"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@mcp-data-agent/postgres",
+  "version": "0.1.0",
+  "description": "PostgreSQL adapter for MCP Data Agent. Created by Arslan Habib.",
+  "author": {
+    "name": "Arslan Habib"
+  },
+  "creator": "Arslan Habib",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node api.js && tsc -p tsconfig.json",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@mcp-data-agent/core": "0.1.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@mcp-data-agent/core": "*",
+    "@types/pg": "^8.11.11",
+    "pg": "^8.14.1"
+  },
+  "keywords": [
+    "mcp-data-agent",
+    "postgresql",
+    "postgres",
+    "database-adapter"
+  ]
+}
